@@ -5,16 +5,15 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["*://gather.town/app/*/*"],
-      "js": ["automation.js"]
-    }
+  "permissions": [
+    "storage",
+    "scripting",
+    "declarativeContent",
+    "activeTab",
+    "tabs"
   ],
-  "permissions": ["storage"],
   "action": {
-    "default_icon": "images/get_started16.png",
-    "default_popup": "popup.html"
+    "default_icon": "images/get_started16.png"
   },
   "icons": {
     "16": "images/get_started16.png",
